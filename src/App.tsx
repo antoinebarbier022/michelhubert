@@ -1,5 +1,9 @@
 import avatar from './assets/michel.png';
 import { ReactComponent as AppleMusic } from './assets/apple.svg';
+import { ReactComponent as Facebook } from './assets/facebook-f-brands.svg';
+import { ReactComponent as Instagram } from './assets/instagram-brands.svg';
+import { ReactComponent as TikTok } from './assets/tiktok-brands.svg';
+import { ReactComponent as Twitch } from './assets/twitch-brands.svg';
 import spotify from './assets/spotify.png';
 import deezer from './assets/deezer.png';
 import youtube from './assets/youtube.png';
@@ -49,8 +53,18 @@ et articulé autour d’une scénographie sensationnelle.
                 )
               }
           </div>
-          <footer className="text-center m-4 text-gray-200/60">Michel Hubert © 2022 - created by <a href="https://www.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className="font-medium text-white/70 hover:text-white ">@An_toine</a> </footer>
-        </div>
+          <footer className='flex-col justify-center align-center text-center mt-10 mb-4'>
+            <div className='flex gap-10 justify-center m-3'>
+              <a href='https://www.facebook.com/profile.php?id=100077093640786' target="_blank" rel='noopener noreferrer'><Facebook height={30} className='fill-white/60 hover:fill-white/90'/></a>
+              <a href='https://www.instagram.com/michelhubert_' target="_blank" rel='noopener noreferrer'><Instagram height={30} className='fill-white/60 hover:fill-white/90'/></a>
+              <a href='https://www.twitch.tv/michelhubertfaitlamusique' target="_blank" rel='noopener noreferrer'><Twitch height={30} className='fill-white/60 hover:fill-white/90'/></a>
+              <a href='https://www.tiktok.com/@michelhubertmusique' target="_blank" rel='noopener noreferrer'><TikTok height={30} className='fill-white/60 hover:fill-white/90'/></a>
+
+            </div>
+            <span className=" text-center  text-gray-200/60">Michel Hubert © 2022 - created by <a href="https://www.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className="font-medium text-white/70 hover:text-white ">@An_toine</a> </span>
+          
+          </footer>
+          </div>
     </div>
   );
 }
