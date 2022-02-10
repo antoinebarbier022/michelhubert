@@ -19,7 +19,7 @@ function App() {
   ]
 
   return (
-    <div className="App flex flex-col justify-between h-screen text-white my-2">
+    <div className="App flex flex-col justify-between h-screen text-white my-10">
         <div className='container w-[90%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%] m-auto bg-white/10 rounded-2xl px-4 sm:px-10 pt-10 shadow-xl shadow-black/5'>
           <div className='px-4'>
             <figure className='mb-10'>
@@ -59,7 +59,6 @@ et articulé autour d’une scénographie sensationnelle.
               <a href='https://www.instagram.com/michelhubert_' target="_blank" rel='noopener noreferrer'><Instagram height={30} className='fill-white/60 hover:fill-white/90'/></a>
               <a href='https://www.twitch.tv/michelhubertfaitlamusique' target="_blank" rel='noopener noreferrer'><Twitch height={30} className='fill-white/60 hover:fill-white/90'/></a>
               <a href='https://www.tiktok.com/@michelhubertmusique' target="_blank" rel='noopener noreferrer'><TikTok height={30} className='fill-white/60 hover:fill-white/90'/></a>
-
             </div>
             <span className=" text-center  text-gray-200/60">Michel Hubert © 2022 - created by <a href="https://www.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className="font-medium text-white/70 hover:text-white ">@An_toine</a> </span>
           
