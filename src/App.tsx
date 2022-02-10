@@ -16,10 +16,10 @@ function App() {
 
   return (
     <div className="App flex flex-col justify-between h-screen text-white my-2">
-        <div className='container w-[90%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%] m-auto bg-white/10 rounded-2xl px-10 pt-10 shadow-xl shadow-black/5'>
+        <div className='container w-[90%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%] m-auto bg-white/10 rounded-2xl px-4 sm:px-10 pt-10 shadow-xl shadow-black/5'>
           <div className='px-4'>
             <figure className='mb-10'>
-              <img src={avatar} alt="Michel Hubert dans son studio" width={350} className='mx-auto rounded-2xl border-4 border-white/10'></img>
+              <img src={avatar} alt="Michel Hubert dans son studio" className='md:w-[400px] mx-auto rounded-2xl border-4 border-white/10'></img>
             </figure>
             <h1 className='text-2xl font-bold uppercase'>Michel Hubert</h1>
             <span className='mb-2 text-md font-mono'>Le son de demain, les sonorités d’hier</span>
@@ -33,11 +33,11 @@ simple concert, le show de Michel Hubert se veut être <strong>un véritable spe
 et articulé autour d’une scénographie sensationnelle.
             </p>
           </div>
-          <div className='container rounded-xl my-8 grid grid-cols-2 gap-2 grid-rows-2'>
+          <div className='container rounded-xl my-8 grid grid-cols-2 gap-2'>
               {
                 items.map( (value, index) =>
                 <>
-                <a  className='flex items-center justify-center p-3 h-[60px] rounded-lg bg-white/5 hover:bg-white/10 transition ease-in-out delay-100' 
+                <a  className='col-span-2 sm:col-span-1 flex items-center justify-center p-3 h-[60px] rounded-lg bg-white/5 hover:bg-white/10 transition ease-in-out delay-100' 
                     href={value.lien}
                     rel="noopener noreferrer"
                     target="_blank"
@@ -49,7 +49,7 @@ et articulé autour d’une scénographie sensationnelle.
                 )
               }
           </div>
-          <footer className="text-center m-4 text-gray-200 opacity-60">Michel Hubert © 2022 - created by <a href="https://www.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className="font-medium hover:text-white ">@An_toine</a> </footer>
+          <footer className="text-center m-4 text-gray-200/60">Michel Hubert © 2022 - created by <a href="https://www.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className="font-medium text-white/70 hover:text-white ">@An_toine</a> </footer>
         </div>
     </div>
   );
