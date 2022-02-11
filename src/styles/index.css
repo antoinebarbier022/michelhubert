@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+body{
   @apply bg-fixed bg-gradient-to-bl from-blue-900 via-indigo-500 to-purple-400
   
   /*bg-gradient-to-tr from-indigo-800 via-purple-800 to-purple-400*/
@@ -11,7 +11,7 @@ html{
 }
 
 .App{
-  @apply h-screen
+  @apply h-full
 }
 
 strong{
