@@ -1,24 +1,135 @@
+import { ReactNode } from 'react';
+import data from './data/data';
+
+// image profile
 import avatar from './assets/michel.png';
+
+// Music Plateforms
 import { ReactComponent as AppleMusic } from './assets/apple.svg';
-import { ReactComponent as Facebook } from './assets/facebook-f-brands.svg';
-import { ReactComponent as Instagram } from './assets/instagram-brands.svg';
-import { ReactComponent as TikTok } from './assets/tiktok-brands.svg';
-import { ReactComponent as Twitch } from './assets/twitch-brands.svg';
 import spotify from './assets/spotify.png';
 import deezer from './assets/deezer.png';
 import youtube from './assets/youtube.png';
 
-import data from './data';
+// Social Networks
+import { ReactComponent as Dailymotion } from './assets/icons/dailymotion-brands.svg';
+import { ReactComponent as Discord } from './assets/icons/discord-brands.svg';
+import { ReactComponent as Dribbble } from './assets/icons/dribbble-brands.svg';
+import { ReactComponent as Facebook } from './assets/icons/facebook-brands.svg';
+import { ReactComponent as Flickr } from './assets/icons/flickr-brands.svg';
+import { ReactComponent as Google } from './assets/icons/google-plus-brands.svg';
+import { ReactComponent as Instagram } from './assets/icons/instagram-brands.svg';
+import { ReactComponent as Line } from './assets/icons/line-brands.svg';
+import { ReactComponent as Linkedin } from './assets/icons/linkedin-brands.svg';
+import { ReactComponent as Medium } from './assets/icons/medium-brands.svg';
+import { ReactComponent as Pinterest } from './assets/icons/pinterest-brands.svg';
+import { ReactComponent as Reddit } from './assets/icons/reddit-brands.svg';
+import { ReactComponent as Skype } from './assets/icons/skype-brands.svg';
+import { ReactComponent as Slack } from './assets/icons/slack-brands.svg';
+import { ReactComponent as Snapchat } from './assets/icons/snapchat-brands.svg';
+import { ReactComponent as Soundcloud } from './assets/icons/soundcloud-brands.svg';
+import { ReactComponent as Telegram } from './assets/icons/telegram-brands.svg';
+import { ReactComponent as TikTok } from './assets/icons/tiktok-brands.svg';
+import { ReactComponent as Tumblr } from './assets/icons/tumblr-brands.svg';
+import { ReactComponent as Twitch } from './assets/icons/twitch-brands.svg';
+import { ReactComponent as Twitter } from './assets/icons/twitter-brands.svg';
+import { ReactComponent as Viber } from './assets/icons/viber-brands.svg';
+import { ReactComponent as Vimeo } from './assets/icons/vimeo-brands.svg';
+import { ReactComponent as WhatsApp } from './assets/icons/whatsapp-brands.svg';
+import { ReactComponent as Youtube } from './assets/icons/youtube-brands.svg';
 
+
+
+
+
+interface MusicPlateforme{
+  name: string,
+  image: ReactNode,
+  icon?: ReactNode,
+  link: string
+}
+
+interface SocialMedia{
+  name: string,
+  icon: ReactNode,
+  link: string
+}
 
 function App() {
 
-  let items  = [
-    {image:<img src={deezer} width={130} alt='logo deezer' ></img>, lien: "https://www.deezer.com/fr/artist/156679512?app_id=140685"},
-    {image:<img src={spotify} width={130}  alt="logo spotify "></img>, lien: "https://open.spotify.com/artist/3e5xVQwYPv4xHzwrjKaVPv?si=hSPN5ZcqTOir1B0HURQu4w"},
-    {image:<AppleMusic />, lien: "https://music.apple.com/fr/artist/michel-hubert/1602819524", },
-    {image:<img src={youtube} width={120} alt="logo youtube "></img>, lien: "https://www.youtube.com/channel/UCqa8GQLCMGoUmX4T4UFPAmQ", },
-  ]
+  const mediaPlatformes: MusicPlateforme[] = [
+    { 
+      name: "Deezer",
+      image:<img src={deezer} width={130} alt='logo deezer' ></img>, 
+      link: "https://www.deezer.com/fr/artist/156679512?app_id=140685"
+    },
+    {
+      name: "Spotify",
+      image:<img src={spotify} width={130}  alt="logo spotify "></img>, 
+      link: "https://open.spotify.com/artist/3e5xVQwYPv4xHzwrjKaVPv?si=hSPN5ZcqTOir1B0HURQu4w"},
+    {
+      name: "Apple Music",
+      image:<AppleMusic />, 
+      link: "https://music.apple.com/fr/artist/michel-hubert/1602819524", },
+    { 
+      name:"Youtube",
+      image:<img src={youtube} width={120} alt="logo youtube "></img>, 
+      link: "https://www.youtube.com/channel/UCqa8GQLCMGoUmX4T4UFPAmQ", },
+  ];
+
+  const styleIcon = "fill-white/60 hover:fill-white/90";
+  const socialNetworks: SocialMedia[] = [
+    { name: "Facebook", icon: <Facebook height={30} className={styleIcon}/>,
+      link: data.socialNetworks.facebook },
+    { name: "Instagram", icon: <Instagram height={30} className={styleIcon}/>,link: data.socialNetworks.instagram },
+    { name: "Twitch", icon: <Twitch height={30} className={styleIcon}/>,
+      link: data.socialNetworks.twitch },
+    { name: "Snapchat", icon: <Snapchat height={30} className={styleIcon}/>,
+      link: data.socialNetworks.snapchat },
+    { name: "Linkedin", icon: <Linkedin height={30} className={styleIcon}/>,
+      link: data.socialNetworks.linkedin },
+    { name: "Telegram", icon: <Telegram height={30} className={styleIcon}/>,
+      link: data.socialNetworks.telegram },
+    { name: "Reddit", icon: <Reddit height={30} className={styleIcon}/>,
+      link: data.socialNetworks.reddit },
+    { name: "twitter", icon: <Twitter height={30} className={styleIcon}/>,
+      link: data.socialNetworks.twitter },
+    { name: "tiktok", icon: <TikTok height={30} className={styleIcon}/>,
+      link: data.socialNetworks.tiktok },
+    { name: "Slack", icon: <Slack height={30} className={styleIcon}/>,
+      link: data.socialNetworks.slack },
+    { name: "google+", icon: <Google height={30} className={styleIcon}/>,
+      link: data.socialNetworks.google },
+    { name: "dribbble", icon: <Dribbble height={30} className={styleIcon}/>,
+      link: data.socialNetworks.dribbble },
+    { name: "Pinterest", icon: <Pinterest height={30} className={styleIcon}/>,
+      link: data.socialNetworks.pinterest }, 
+    { name: "Youtube", icon: <Youtube height={30} className={styleIcon}/>,
+      link: data.socialNetworks.youtube },
+    { name: "Soundcloud", icon: <Soundcloud height={30} className={styleIcon}/>,
+      link: data.socialNetworks.soundcloud },
+    { name: "Medium", icon: <Medium height={30} className={styleIcon}/>,
+      link: data.socialNetworks.medium },
+    { name: "WhatsApp", icon: <WhatsApp height={30} className={styleIcon}/>,
+      link: data.socialNetworks.whatsApp },
+    { name: "Tumblr", icon: <Tumblr height={30} className={styleIcon}/>,
+      link: data.socialNetworks.tumblr },
+    { name: "Skype", icon: <Skype height={30} className={styleIcon}/>,
+      link: data.socialNetworks.skype },
+    { name: "Vimeo", icon: <Vimeo height={30} className={styleIcon}/>,
+      link: data.socialNetworks.vimeo },
+    { name: "Dailymotion", icon: <Dailymotion height={30} className={styleIcon}/>,
+      link: data.socialNetworks.dailymotion },
+    { name: "Discord", icon: <Discord height={30} className={styleIcon}/>,
+      link: data.socialNetworks.discord },
+    { name: "Viber", icon: <Viber height={30} className={styleIcon}/>,
+      link: data.socialNetworks.viber },
+    { name: "Line", icon: <Line height={30} className={styleIcon}/>,
+      link: data.socialNetworks.line },
+    { name: "Flickr", icon: <Flickr height={30} className={styleIcon}/>,
+      link: data.socialNetworks.flickr }
+  ];
+
+
 
   return (
     <div className="App h-full text-white py-10">
@@ -33,28 +144,34 @@ function App() {
           </div>
           <div className='container rounded-xl my-8 grid grid-cols-2 gap-2'>
               {
-                items.map( (value, index) =>
-                <>
-                <a  className='col-span-2 sm:col-span-1 flex items-center justify-center p-3 h-[60px] rounded-lg bg-white/5 hover:bg-white/10 transition ease-in-out delay-100' 
-                    href={value.lien}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    key={index}
-                    >
-                  {value.image}
-                </a>
-                </>
+                mediaPlatformes.map( (value, index) =>
+                  <a  className='col-span-2 sm:col-span-1 flex items-center justify-center p-3 h-[60px] rounded-lg bg-white/5 hover:bg-white/10 transition ease-in-out delay-100' 
+                      href={value.link}
+                      title={value.name}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      key={index}
+                      >
+                    {value.image}
+                  </a>
                 )
               }
           </div>
           <footer className='flex-col justify-center align-center text-center mt-10 pb-4'>
-            <div className='flex gap-10 justify-center m-3'>
-              <a href={data.links.facebook} target="_blank" rel='noopener noreferrer'><Facebook height={30} className='fill-white/60 hover:fill-white/90'/></a>
-              <a href={data.links.instagram} target="_blank" rel='noopener noreferrer'><Instagram height={30} className='fill-white/60 hover:fill-white/90'/></a>
-              <a href={data.links.twitch} target="_blank" rel='noopener noreferrer'><Twitch height={30} className='fill-white/60 hover:fill-white/90'/></a>
-              <a href={data.links.tiktok} target="_blank" rel='noopener noreferrer'><TikTok height={30} className='fill-white/60 hover:fill-white/90'/></a>
+            <div className='flex flex-wrap gap-10 justify-center m-3'>
+              {
+                socialNetworks.map( (value, index) =>
+                  value.link &&
+                  <a  href={value.link} 
+                      key={index} 
+                      title={value.name}
+                      target="_blank" 
+                      rel='noopener noreferrer'>
+                    {value.icon}
+                  </a>)
+              }
             </div>
-            <span className=" text-center  text-gray-200/60">{data.title} © {new Date().getFullYear()} - created by <a href="https://www.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className="font-medium text-white/70 hover:text-white ">@An_toine</a> </span>
+            <span className=" text-center  text-gray-200/60">{data.title} © {new Date().getFullYear()} - Made by <a href="https://www.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className="font-medium text-white/70 hover:text-white ">@An_toine</a> </span>
           
           </footer>
         </div>

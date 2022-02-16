@@ -12,12 +12,37 @@ const data = {
             simple concert, le show de Michel Hubert se veut être <strong>un véritable spectacle</strong>, rythmé par la musique
             et articulé autour d’une scénographie sensationnelle.
     </>,
-    links:{
+    musicPlateforms:{
+        amazon:"", spotify:"", deezer:"", apple:"", huawei:"", soundcloud:""
+    },
+    socialNetworks:{
         facebook:"https://www.facebook.com/profile.php?id=100077093640786",
         instagram:"https://www.instagram.com/michelhubert_",
-        twitter:"",
         tiktok:"https://www.tiktok.com/@michelhubertmusique",
         twitch:"https://www.twitch.tv/michelhubertfaitlamusique",
+
+        // non utilisé
+        twitter:"",
+        linkedin:"",
+        snapchat:"",
+        telegram:"",
+        reddit:"",
+        slack:"",
+        google:"",
+        dribbble:"",
+        pinterest:"",
+        youtube:"",
+        soundcloud:"",
+        medium:"",
+        whatsApp:"",
+        tumblr:"",
+        skype:"",
+        vimeo:"",
+        dailymotion:"",
+        discord:"",
+        viber:"",
+        line:"",
+        flickr:"",
     }
 }
 
