@@ -1,14 +1,11 @@
 import { ReactNode } from 'react';
-import data from './data/data';
-
-// image profile
-import avatar from './assets/michel.png';
+import { data, theme} from './data/data';
 
 // Music Plateforms
-import { ReactComponent as AppleMusic } from './assets/apple.svg';
-import spotify from './assets/spotify.png';
-import deezer from './assets/deezer.png';
-import youtube from './assets/youtube.png';
+import { ReactComponent as AppleMusic } from './assets/plateforms/apple-music.svg';
+import spotify from './assets/plateforms/spotify.png';
+import deezer from './assets/plateforms/deezer.png';
+import youtube from './assets/plateforms/youtube.png';
 
 // Social Networks
 import { ReactComponent as Dailymotion } from './assets/icons/dailymotion-brands.svg';
@@ -37,10 +34,6 @@ import { ReactComponent as Vimeo } from './assets/icons/vimeo-brands.svg';
 import { ReactComponent as WhatsApp } from './assets/icons/whatsapp-brands.svg';
 import { ReactComponent as Youtube } from './assets/icons/youtube-brands.svg';
 
-
-
-
-
 interface MusicPlateforme{
   name: string,
   image: ReactNode,
@@ -56,24 +49,32 @@ interface SocialMedia{
 
 function App() {
 
+  // website title
+  document.title = data.title;
+
+  // set background 
+  const tab = theme.backgroundColor.split(" ");
+  tab.map( x => document.body.classList.add(x));
+  
+
   const mediaPlatformes: MusicPlateforme[] = [
     { 
       name: "Deezer",
       image:<img src={deezer} width={130} alt='logo deezer' ></img>, 
-      link: "https://www.deezer.com/fr/artist/156679512?app_id=140685"
+      link: data.musicPlateforms.deezer
     },
     {
       name: "Spotify",
       image:<img src={spotify} width={130}  alt="logo spotify "></img>, 
-      link: "https://open.spotify.com/artist/3e5xVQwYPv4xHzwrjKaVPv?si=hSPN5ZcqTOir1B0HURQu4w"},
+      link: data.musicPlateforms.spotify},
     {
       name: "Apple Music",
       image:<AppleMusic />, 
-      link: "https://music.apple.com/fr/artist/michel-hubert/1602819524", },
+      link: data.musicPlateforms.appleMusic, },
     { 
       name:"Youtube",
       image:<img src={youtube} width={120} alt="logo youtube "></img>, 
-      link: "https://www.youtube.com/channel/UCqa8GQLCMGoUmX4T4UFPAmQ", },
+      link: data.musicPlateforms.youtube, },
   ];
 
   const styleIcon = "fill-white/60 hover:fill-white/90";
@@ -136,7 +137,7 @@ function App() {
         <div className='container w-[90%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%] m-auto bg-white/10 rounded-2xl px-4 sm:px-10 pt-10 shadow-xl shadow-black/5'>
           <div className='px-4'>
             <figure className='mb-10'>
-              <img src={avatar} alt={data.image.alt} className='md:w-[400px] mx-auto rounded-2xl border-4 border-white/10'></img>
+              <img src={data.image.src} alt={data.image.alt} className='md:w-[400px] mx-auto rounded-2xl border-4 border-white/10'></img>
             </figure>
             <h1 className='text-2xl font-bold uppercase'>{data.title}</h1>
             <span className='mb-2 text-md font-mono'>{data.subtitle}</span> 

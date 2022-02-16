@@ -1,9 +1,17 @@
+// image profile
+import avatar from '../assets/michel.png';
+
+const theme = {
+    backgroundColor: "bg-gradient-to-bl from-blue-900 via-indigo-500 to-purple-400",
+};
+
 const data = {
-    image:{
-        alt: "Michel Hubert dans son studio"
-    },
     title:"Michel Hubert",
     subtitle:"Le son de demain, les sonorités d’hier",
+    image:{
+        src: avatar,
+        alt: "Michel Hubert dans son studio"
+    },
     description: <>
             Un style rétro dans <strong>un univers décalé</strong> aux influences house, électro et dance, Michel Hubert est avant
             tout <strong>un condensé d’énergie</strong>, d’humour et d’enjouement. C’est depuis son propre studio de musique,
@@ -13,7 +21,13 @@ const data = {
             et articulé autour d’une scénographie sensationnelle.
     </>,
     musicPlateforms:{
-        amazon:"", spotify:"", deezer:"", apple:"", huawei:"", soundcloud:""
+        amazonMusic:"", 
+        spotify:"https://open.spotify.com/artist/3e5xVQwYPv4xHzwrjKaVPv?si=hSPN5ZcqTOir1B0HURQu4w", 
+        deezer:"https://www.deezer.com/fr/artist/156679512?app_id=140685", 
+        appleMusic:"https://music.apple.com/fr/artist/michel-hubert/1602819524", 
+        huaweiMusic:"", 
+        youtube:"https://www.youtube.com/channel/UCqa8GQLCMGoUmX4T4UFPAmQ",
+        soundcloud:"https://soundcloud.com/michel-hubert-499690446"
     },
     socialNetworks:{
         facebook:"https://www.facebook.com/profile.php?id=100077093640786",
@@ -46,4 +60,4 @@ const data = {
     }
 }
 
-export default data;
+export { data, theme };
