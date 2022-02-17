@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
-import { data, theme} from './data/data';
+import  {data, theme} from "./config/main";
+
 
 // Music Plateforms
 import { ReactComponent as AppleMusic } from './assets/plateforms/apple-music.svg';
@@ -53,10 +54,9 @@ function App() {
   document.title = data.title;
 
   // set background 
-  const tab = theme.backgroundColor.split(" ");
+  const tab = theme.appBg.split(" ");
   tab.map( x => document.body.classList.add(x));
   
-
   const mediaPlatformes: MusicPlateforme[] = [
     { 
       name: "Deezer",
@@ -77,7 +77,7 @@ function App() {
       link: data.musicPlateforms.youtube, },
   ];
 
-  const styleIcon = "fill-white/60 hover:fill-white/90";
+  const styleIcon = theme.iconFill + " "+ theme.iconFillHover+ " transition ease-in-out delay-[80]";
   const socialNetworks: SocialMedia[] = [
     { name: "Facebook", icon: <Facebook height={30} className={styleIcon}/>,
       link: data.socialNetworks.facebook },
@@ -133,20 +133,20 @@ function App() {
 
 
   return (
-    <div className="App h-full text-white py-10">
-        <div className='container w-[90%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%] m-auto bg-white/10 rounded-2xl px-4 sm:px-10 pt-10 shadow-xl shadow-black/5'>
-          <div className='px-4'>
-            <figure className='mb-10'>
-              <img src={data.image.src} alt={data.image.alt} className='md:w-[400px] mx-auto rounded-2xl border-4 border-white/10'></img>
+    <div className={`App h-full py-10 ${theme.textColor}`}>
+        <div className={`container w-[90%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%] m-auto ${theme.cardBg} ${theme.cardOpacity}  rounded-2xl px-4 sm:px-10 pt-10 shadow-xl shadow-black/5`}>
+          <div className={`px-4`}>
+            <figure className={`mb-10`}>
+              <img src={data.image.src} alt={data.image.alt} className={`md:w-[400px] mx-auto rounded-2xl border-4 border-white/10`}></img>
             </figure>
-            <h1 className='text-2xl font-bold uppercase'>{data.title}</h1>
-            <span className='mb-2 text-md font-mono'>{data.subtitle}</span> 
-            <p className='text-gray-300 font-light text-justify mt-5'> {data.description}</p>
+            <h1 className={`text-2xl font-bold uppercase`}>{data.title}</h1>
+            <span className={`mb-2 text-md font-mono`}>{data.subtitle}</span> 
+            <p className={` font-light text-justify mt-5 ${theme.textOpacity} ${theme.textColor} `}> {data.description}</p>
           </div>
-          <div className='container rounded-xl my-8 grid grid-cols-2 gap-2'>
+          <div className={`container rounded-xl my-8 grid grid-cols-2 gap-2 px-4`}>
               {
                 mediaPlatformes.map( (value, index) =>
-                  <a  className='col-span-2 sm:col-span-1 flex items-center justify-center p-3 h-[60px] rounded-lg bg-white/5 hover:bg-white/10 transition ease-in-out delay-100' 
+                  <a  className={`col-span-2 sm:col-span-1 flex items-center justify-center  h-[60px] rounded-lg ${theme.linkMusicBg} ${theme.linkMusicHoverBg} transition ease-in-out delay-[80]`} 
                       href={value.link}
                       title={value.name}
                       rel="noopener noreferrer"
@@ -158,8 +158,8 @@ function App() {
                 )
               }
           </div>
-          <footer className='flex-col justify-center align-center text-center mt-10 pb-4'>
-            <div className='flex flex-wrap gap-10 justify-center m-3'>
+          <footer className={`flex-col justify-center align-center text-center mt-10 pb-4`}>
+            <div className={`flex flex-wrap gap-10 justify-center m-3`}>
               {
                 socialNetworks.map( (value, index) =>
                   value.link &&
@@ -172,7 +172,7 @@ function App() {
                   </a>)
               }
             </div>
-            <span className=" text-center  text-gray-200/60">{data.title} © {new Date().getFullYear()} - Made by <a href="https://www.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className="font-medium text-white/70 hover:text-white ">@An_toine</a> </span>
+            <span className={` text-center ${theme.textOpacity} ${theme.textColor}`}>{data.title} © {new Date().getFullYear()} - Made by <a href="https://www.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className={` font-medium ${theme.textColor} `}>@An_toine</a> </span>
           
           </footer>
         </div>

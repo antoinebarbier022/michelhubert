@@ -1,15 +1,10 @@
 // image profile
-import avatar from '../assets/michel.png';
-
-const theme = {
-    backgroundColor: "bg-gradient-to-bl from-blue-900 via-indigo-500 to-purple-400",
-};
 
 const data = {
     title:"Michel Hubert",
     subtitle:"Le son de demain, les sonorités d’hier",
     image:{
-        src: avatar,
+        src: "",
         alt: "Michel Hubert dans son studio"
     },
     description: <>
@@ -60,4 +55,4 @@ const data = {
     }
 }
 
-export { data, theme };
+export default data ;
