@@ -30,7 +30,7 @@ function LinksPlateforms( { hidden = false, data, } : SocialNetworksProps) {
       ["Apple Music", <AppleMusic /> ],
       ["Amazon Music", <AmazonMusic width={130}/> ],
       ["Itunes Store", <img src={itunes} width={130} alt="logo Youtube "></img> ],
-      ["Soundcloud", <Soundcloud width={170}/>],
+      ["Soundcloud", <Soundcloud width={170} height={40}/>],
       ["Youtube", <img src={youtube} width={120} alt="logo Youtube "></img> ],
       ["Bandcamp", <img src={bandcamp} width={140} alt="logo Bandcamp "></img> ],
     ]);
