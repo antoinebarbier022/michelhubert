@@ -1,6 +1,8 @@
 export interface ThemeModel{
     appBg: string,
 
+    styleImg: string,
+
     cardBg: string,
     cardOpacity: string,
 
