@@ -1,11 +1,12 @@
 // image profile
 import { DataModel } from '../../../model/data.model';
+import { SectionsType } from '../../../types/All.types';
 import avatar from './image.jpg';
 
 const data : DataModel= {
     favicon:{
         type: "emoji",
-        src: `😅`
+        src: `💻`
     },
     title:"Antoine",
     subtitle:"Developpeur Web Freelance",
@@ -35,6 +36,8 @@ const data : DataModel= {
         {name:"Instagram",link:"null"},
         {name:"Dribbble",link:"null"},
        ],
+    displaySection: ["contact", "footer"]
+    
 }
 
 export default data;

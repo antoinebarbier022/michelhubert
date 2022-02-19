@@ -7,3 +7,5 @@ export type PlateformType = "Facebook" | "Instagram" | "Twitch" | "Snapchat" | "
                             "Bandcamp" | "Itunes Store";
 
 export type FaviconType = "emoji" | "url" | "image";
+
+export type SectionsType = "contact" | "footer" | "plateforms" | "socials networks";

@@ -1,4 +1,4 @@
-import { FaviconType, PlateformType } from "../types/All.types";
+import { FaviconType, PlateformType, SectionsType } from "../types/All.types";
 
 export interface DataModel{
     favicon: {
@@ -18,6 +18,7 @@ export interface DataModel{
         location?:string,
     }
     plateforms: Array<{ name: PlateformType, link: string }>
-    socialNetworks: Array<{ name: PlateformType, link: string }>
+    socialNetworks: Array<{ name: PlateformType, link: string }>,
+    displaySection?: Array<SectionsType>
 };
 
