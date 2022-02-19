@@ -20,17 +20,15 @@ const data : DataModel= {
         J'ai créé ce site internet afin de permettre 
     </>,
     contact: {
-        location: "36 quai des Orfèvres, Paris ",
+        //location: "36 quai des Orfèvres, Paris ",
         email: "adresse@gmail.com"
     },
-    /*
+    
     plateforms: [ 
-        {name:"5euro.com",link:"null"},
-        {name:"Youtube",link:"null"},
-        {name:"Amazon Music",link:"null"},
-        {name:"Bandcamp", link:"null"},
-        {name:"Itunes Store", link:"null"}
-       ],*/
+        {name:"Tiktok", link:"null"},
+        //{name:"Youtube",link:"null"},
+        
+       ],
     socialNetworks:[ 
         {name:"Facebook",link:"null"},
         {name:"Instagram",link:"null"},

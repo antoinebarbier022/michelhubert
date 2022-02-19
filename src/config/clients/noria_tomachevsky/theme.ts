@@ -1,12 +1,13 @@
 import { ThemeModel } from "../../../model/theme.model";
 
 const theme: ThemeModel = {
-    appBg: "bg-gradient-to-bl from-cyan-200 to-green-900",
+    appBg: "bg-gradient-to-bl from-cyan-400 to-cyan-800",
+    //bg-gradient-to-bl from-cyan-200 to-green-900
 
     styleImg:"md:w-[500px]",
     
-    cardBg: "bg-black",
-    cardOpacity: "bg-opacity-[0.15]",
+    cardBg: "bg-white",
+    cardOpacity: "bg-opacity-[0.1]",
 
     textColor: "text-white",
     textOpacity: "text-opacity-80",

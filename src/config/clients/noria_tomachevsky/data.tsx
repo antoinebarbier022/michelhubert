@@ -14,16 +14,19 @@ const data : DataModel= {
         alt: "Michel Hubert dans son studio"
     },
     description: <>
-        La plus belle danseuse de tout les temps et la meilleur prof de danse classique
+        La plus belle danseuse de tous les temps et la meilleure prof de danse classique !
     </>,
     contact: {
-        location: "Montpellier",
+        //location: "Montpellier",
         email: "noria.tomachevsky@gmail.com"
     },
-    socialNetworks:[ 
-        {name:"Facebook",link:"null"},
+    plateforms:[
+        {name:"Youtube",link:"null"},
         {name:"Instagram",link:"null"},
-        {name:"Tiktok",link:"null"},
+        {name:"Facebook",link:"null"},
+    ],
+    socialNetworks:[ 
+        //{name:"Instagram",link:"null"},
        ],
     displaySection: ["socials networks","contact", "footer"]
     
