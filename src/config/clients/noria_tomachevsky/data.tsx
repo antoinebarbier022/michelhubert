@@ -21,9 +21,8 @@ const data : DataModel= {
         email: "noria.tomachevsky@gmail.com"
     },
     plateforms:[
-        {name:"Youtube",link:"null"},
-        {name:"Instagram",link:"null"},
-        {name:"Facebook",link:"null"},
+        {name:"Youtube",link:"https://www.youtube.com/channel/UC-kgIVx5FDuf3LPFYzV6_sQ/featured"},
+        {name:"Instagram",link:"https://www.instagram.com/noriatomach/?hl=fr"},
     ],
     socialNetworks:[ 
         //{name:"Instagram",link:"null"},
