@@ -21,4 +21,4 @@ const theme: ThemeModel = {
     boldTextColor: "#fff",
 };
 
-export default theme ;
+export { theme } ;

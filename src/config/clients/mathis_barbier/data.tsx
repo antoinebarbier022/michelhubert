@@ -34,4 +34,4 @@ const data : DataModel= {
     
 }
 
-export default data;
+export { data } ;
