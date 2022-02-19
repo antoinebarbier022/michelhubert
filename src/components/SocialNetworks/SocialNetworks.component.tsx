@@ -63,10 +63,10 @@ function SocialNetworks( { data, hidden = false, fill, hover } : SocialNetworksP
         ["Discord", <Discord height={30} className={styleIcon}/> ],
         ["Viber", <Viber height={30} className={styleIcon}/> ],
         ["Line", <Line height={30} className={styleIcon}/> ],
-        ["Flickr", <Flickr height={30} className={styleIcon}/> ]
+        ["Flickr", <Flickr height={30} className={styleIcon}/> ],
       ]);
 
-    if (hidden) {
+    if (hidden || (data?.length == 0)) {
         return (<></>);
     }
     return ( <div className={`flex flex-wrap gap-10 justify-center m-3`}>

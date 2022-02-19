@@ -5,7 +5,7 @@ import SocialNetworks from './components/SocialNetworks/SocialNetworks.component
 import MusicPlateforms from './components/LinksPlateforms/LinksPlateforms.component';
 import Footer from './components/Footer/footer.component';
 import Contact from "./components/Contact/Contact.component";
-import { FaviconType } from "./types/All.types";
+import { ContactInfo, FaviconType } from "./types/All.types";
 
 
 function setFavicon(type:FaviconType, src: string) {
@@ -43,8 +43,13 @@ function App() {
             <p className={` font-light text-justify my-5  ${theme.textOpacity} ${theme.textColor} `}> {data.description}</p>
           </div>
 
-          <MusicPlateforms data={data.plateforms} hidden={data.plateforms === undefined} />
-          <Contact  email={data.contact?.email} 
+          <MusicPlateforms data={data.plateforms} 
+                            className={!(data.contact === undefined) ? "mb-2": ""}
+                            hidden={data.plateforms === undefined} />
+          <Contact  /*data={new Map<ContactInfo, string>([
+                      ["email", data.contact?.email]
+                    ])}*/
+                    email={data.contact?.email} 
                     phone={data.contact?.phone} 
                     location={data.contact?.location} 
                     hidden={data.contact === undefined}/>

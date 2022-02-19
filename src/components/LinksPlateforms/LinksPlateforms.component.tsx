@@ -1,10 +1,13 @@
-
+import './LinksPlateforms.style.css';
 
 // Music Plateforms
 import { ReactComponent as AppleMusic } from '../../assets/plateforms/apple-music.svg';
 import { ReactComponent as CinqEuros } from '../../assets/plateforms/5euro.svg';
 import { ReactComponent as AmazonMusic} from '../../assets/plateforms/amazon-music.svg';
 import { ReactComponent as Soundcloud} from '../../assets/plateforms/soundcloud.svg';
+import { ReactComponent as Tiktok} from '../../assets/plateforms/tiktok.svg';
+import { ReactComponent as Facebook} from '../../assets/plateforms/facebook.svg';
+import instagram from '../../assets/plateforms/instagram.png';
 import itunes from '../../assets/plateforms/itunes-store.png';
 import bandcamp from '../../assets/plateforms/bandcamp.png';
 import spotify from '../../assets/plateforms/spotify.png';
@@ -18,27 +21,33 @@ import LinkCard from '../LinkCard/Link.component';
 
 type LinksPlateformsProps = {
     hidden?:boolean,
+    className?: string,
     data: Array<{name: PlateformType, link: string}> | undefined,
 };
 
-function LinksPlateforms( { hidden = false, data, } : LinksPlateformsProps) {
+function LinksPlateforms( { hidden = false, className, data, } : LinksPlateformsProps) {
 
     const PlatformeImage = new Map<PlateformType, ReactNode>([
       ["Spotify", <img src={spotify} width={130}  alt="logo spotify "></img> ],
       ["Deezer", <img src={deezer} width={130}  alt='logo deezer' ></img> ],
+      ["Tiktok", <Tiktok width={130} height={40}/>],
       ["5euro.com", <CinqEuros height={40}/> ],
       ["Apple Music", <AppleMusic /> ],
+      ["Facebook", <Facebook  width={130} height={40} /> ],
+      ["Instagram", <img src={instagram} width={130} alt="logo Itunes "></img> ],
       ["Amazon Music", <AmazonMusic width={130} height={40}/> ],
-      ["Itunes Store", <img src={itunes} width={130} alt="logo Youtube "></img> ],
-      ["Soundcloud", <Soundcloud width={170} height={40}/>],
-      ["Youtube", <img src={youtube} width={120} alt="logo Youtube "></img> ],
-      ["Bandcamp", <img src={bandcamp} width={140} alt="logo Bandcamp "></img> ],
+      ["Itunes Store", <img src={itunes} width={130} alt="logo Itunes "></img> ],
+      ["Soundcloud", <Soundcloud width={130} height={40}/>],
+      ["Youtube", <img src={youtube} width={130} alt="logo Youtube "></img> ],
+      ["Bandcamp", <img src={bandcamp} width={130} alt="logo Bandcamp "></img> ],
     ]);
 
-    if (hidden) {
+    const styleGrid = (data?.length == 1 || data?.length == 3) ? "grid-cols-1": "grid-cols-2";
+
+    if (hidden || (data?.length == 0)) {
         return (<></>);
     }
-    return (<div className={`container rounded-xl mb-8 grid grid-cols-2 gap-2`}>
+    return (<div className={`section-plateforms container rounded-xl mb-8 grid gap-2 ${styleGrid} ${className}`}>
     {
       data != undefined &&
       data.map( (value, index) => 
