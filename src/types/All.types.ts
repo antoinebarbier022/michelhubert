@@ -5,3 +5,5 @@ export type PlateformType = "Facebook" | "Instagram" | "Twitch" | "Snapchat" | "
                             "Dailymotion" | "Discord" | "Viber" | "Line" | "Flickr" |
                             "5euro.com" | "Deezer" | "Spotify" | "Apple Music" | "Amazon Music" |
                             "Bandcamp" | "Itunes Store";
+
+export type FaviconType = "emoji" | "url" | "image";

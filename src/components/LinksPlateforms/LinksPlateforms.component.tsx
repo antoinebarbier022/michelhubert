@@ -13,7 +13,7 @@ import youtube from '../../assets/plateforms/youtube.png';
 
 
 import { ReactNode } from "react";
-import { PlateformType } from "../../types/Plateforms.types";
+import { PlateformType } from "../../types/All.types";
 import LinkCard from '../LinkCard/Link.component';
 
 type LinksPlateformsProps = {
@@ -25,10 +25,10 @@ function LinksPlateforms( { hidden = false, data, } : LinksPlateformsProps) {
 
     const PlatformeImage = new Map<PlateformType, ReactNode>([
       ["Spotify", <img src={spotify} width={130}  alt="logo spotify "></img> ],
-      ["Deezer", <img src={deezer} width={130} alt='logo deezer' ></img> ],
+      ["Deezer", <img src={deezer} width={130}  alt='logo deezer' ></img> ],
       ["5euro.com", <CinqEuros height={40}/> ],
       ["Apple Music", <AppleMusic /> ],
-      ["Amazon Music", <AmazonMusic width={130}/> ],
+      ["Amazon Music", <AmazonMusic width={130} height={40}/> ],
       ["Itunes Store", <img src={itunes} width={130} alt="logo Youtube "></img> ],
       ["Soundcloud", <Soundcloud width={170} height={40}/>],
       ["Youtube", <img src={youtube} width={120} alt="logo Youtube "></img> ],
@@ -38,7 +38,7 @@ function LinksPlateforms( { hidden = false, data, } : LinksPlateformsProps) {
     if (hidden) {
         return (<></>);
     }
-    return (<div className={`container rounded-xl mb-8 grid grid-cols-2 gap-2 px-2 sm:px-4`}>
+    return (<div className={`container rounded-xl mb-8 grid grid-cols-2 gap-2`}>
     {
       data.map( (value, index) => 
       PlatformeImage.get(value.name) &&

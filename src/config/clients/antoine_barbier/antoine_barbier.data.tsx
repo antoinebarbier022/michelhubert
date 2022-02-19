@@ -3,6 +3,10 @@ import { DataModel } from '../../../model/data.model';
 import avatar from './image.jpg';
 
 const data : DataModel= {
+    favicon:{
+        type: "emoji",
+        src: `😅`
+    },
     title:"Antoine",
     subtitle:"Developpeur Web Freelance",
     image:{
@@ -15,6 +19,10 @@ const data : DataModel= {
         <br/>
         J'ai créé ce site internet afin de permettre 
     </>,
+    contact: {
+        location: "36 quai des Orfèvres, Paris ",
+        email: "adresse@gmail.com"
+    },
     plateforms: [ 
         {name:"5euro.com",link:"null"},
         {name:"Youtube",link:"null"},
