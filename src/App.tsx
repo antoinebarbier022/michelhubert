@@ -43,16 +43,16 @@ function App() {
             <p className={` font-light text-justify my-5  ${theme.textOpacity} ${theme.textColor} `}> {data.description}</p>
           </div>
 
-          <MusicPlateforms data={data.plateforms} hidden={!data.displaySection?.includes("plateforms")} />
+          <MusicPlateforms data={data.plateforms} hidden={data.plateforms === undefined} />
           <Contact  email={data.contact?.email} 
                     phone={data.contact?.phone} 
                     location={data.contact?.location} 
-                    hidden={!data.displaySection?.includes("contact")}/>
+                    hidden={data.contact === undefined}/>
           <SocialNetworks data={data.socialNetworks} 
                             fill={theme.iconFill} 
                             hover={theme.iconFillHover}
-                            hidden={!data.displaySection?.includes("socials networks")}/>
-          <Footer hidden={!data.displaySection?.includes("footer")} author={true}/>
+                            hidden={data.socialNetworks === undefined}/>
+          <Footer author={true}/>
         </Card>
     </div>
   );

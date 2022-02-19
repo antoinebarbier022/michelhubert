@@ -20,14 +20,14 @@ function Contact( { email, phone, location, hidden, className, } : LinkCardProps
     return (  <div className={`container mb-8 flex flex-wrap gap-2 ${className}`}>
         {
             email && 
-                <LinkCard link={'mailto:' + email}  className="min-w-[220px] order-last flex-1 flex flex-col gap-3 p-2">
+                <LinkCard link={'mailto:' + email}  className="min-w-fit order-last flex-1 flex flex-col gap-3 p-2">
                     <Email width={25} fill="white" className="mt-2"/>
-                    <p className="px-4"> { email }</p>
+                    <p className="mx-4"> { email }</p>
                 </LinkCard>
         }
         {
             location && 
-                <LinkCard link={"https://www.google.com/maps/search/" + location} className="min-w-[220px] flex-1 flex flex-col gap-3 p-2">
+                <LinkCard link={"https://www.google.com/maps/search/" + location} className="min-w-fit flex-1 flex flex-col gap-3 p-2">
                     <Localisation width={25} fill="white" className="mt-2"/>
                     <p className="px-4"> { location }</p>
                 </LinkCard>
@@ -35,7 +35,7 @@ function Contact( { email, phone, location, hidden, className, } : LinkCardProps
 
         {
             phone && 
-                <LinkCard link={'tel:' + phone} className="min-w-[220px] flex-1 flex flex-col gap-3 p-2">
+                <LinkCard link={'tel:' + phone} className="min-w-fit flex-1 flex flex-col gap-3 p-2">
                     <Phone width={25} fill="white" className="mt-2"/>
                     <p className="px-4"> { phone }</p>
                 </LinkCard>

@@ -2,7 +2,6 @@
 import { DataModel } from '../../../model/data.model';
 import avatar from './michel.png';
 import favicon from './favicon.png';
-import { SectionsType } from '../../../types/All.types';
 
 const data : DataModel= {
     favicon:{

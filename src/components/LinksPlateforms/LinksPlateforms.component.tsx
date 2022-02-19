@@ -18,7 +18,7 @@ import LinkCard from '../LinkCard/Link.component';
 
 type LinksPlateformsProps = {
     hidden?:boolean,
-    data: Array<{name: PlateformType, link: string}>,
+    data: Array<{name: PlateformType, link: string}> | undefined,
 };
 
 function LinksPlateforms( { hidden = false, data, } : LinksPlateformsProps) {
@@ -40,6 +40,7 @@ function LinksPlateforms( { hidden = false, data, } : LinksPlateformsProps) {
     }
     return (<div className={`container rounded-xl mb-8 grid grid-cols-2 gap-2`}>
     {
+      data != undefined &&
       data.map( (value, index) => 
       PlatformeImage.get(value.name) &&
         <LinkCard name={value.name} link={value.link} key={index}>
