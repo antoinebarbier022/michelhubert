@@ -38,4 +38,4 @@ const data : DataModel= {
        ],
     displaySection: [ "plateforms", "socials networks", "footer"]
 }
-export default data ;
+export { data } ;
