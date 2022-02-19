@@ -25,7 +25,7 @@ import { ReactComponent as Viber } from '../../assets/icons/socialNetworks/viber
 import { ReactComponent as Vimeo } from '../../assets/icons/socialNetworks/vimeo-brands.svg';
 import { ReactComponent as WhatsApp } from '../../assets/icons/socialNetworks/whatsapp-brands.svg';
 import { ReactComponent as Youtube } from '../../assets/icons/socialNetworks/youtube-brands.svg';
-import { PlateformType } from '../../types/Plateforms.types';
+import { PlateformType } from '../../types/All.types';
 
 type SocialNetworksProps = {
     hidden?:boolean,

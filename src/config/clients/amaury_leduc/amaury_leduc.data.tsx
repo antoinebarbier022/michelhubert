@@ -1,8 +1,13 @@
 // image profile
 import { DataModel } from '../../../model/data.model';
 import avatar from './michel.png';
+import favicon from './favicon.png';
 
 const data : DataModel= {
+    favicon:{
+        type: "image",
+        src: favicon
+    },
     title:"Michel Hubert",
     subtitle:"Le son de demain, les sonorités d’hier",
     image:{
