@@ -17,8 +17,8 @@ export interface DataModel{
         phone?:string,
         location?:string,
     }
-    plateforms: Array<{ name: PlateformType, link: string }>
-    socialNetworks: Array<{ name: PlateformType, link: string }>,
+    plateforms?: Array<{ name: PlateformType, link: string }>
+    socialNetworks?: Array<{ name: PlateformType, link: string }>,
     displaySection?: Array<SectionsType>
 };
 

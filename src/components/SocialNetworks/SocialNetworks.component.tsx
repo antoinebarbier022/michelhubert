@@ -29,7 +29,7 @@ import { PlateformType } from '../../types/All.types';
 
 type SocialNetworksProps = {
     hidden?:boolean,
-    data: Array<{name: PlateformType, link: string}>,
+    data: Array<{name: PlateformType, link: string}> | undefined,
     fill: string,
     hover: string,
 };
@@ -71,6 +71,7 @@ function SocialNetworks( { data, hidden = false, fill, hover } : SocialNetworksP
     }
     return ( <div className={`flex flex-wrap gap-10 justify-center m-3`}>
     {
+      data != undefined &&
         data.map( (value, index) =>
         PlatformeIcon.get(value.name) &&
         <a  href={value.link} 

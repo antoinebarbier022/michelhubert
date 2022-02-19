@@ -1,6 +1,5 @@
 // image profile
 import { DataModel } from '../../../model/data.model';
-import { SectionsType } from '../../../types/All.types';
 import avatar from './image.jpg';
 
 const data : DataModel= {
@@ -24,13 +23,14 @@ const data : DataModel= {
         location: "36 quai des Orfèvres, Paris ",
         email: "adresse@gmail.com"
     },
+    /*
     plateforms: [ 
         {name:"5euro.com",link:"null"},
         {name:"Youtube",link:"null"},
         {name:"Amazon Music",link:"null"},
         {name:"Bandcamp", link:"null"},
         {name:"Itunes Store", link:"null"}
-       ],
+       ],*/
     socialNetworks:[ 
         {name:"Facebook",link:"null"},
         {name:"Instagram",link:"null"},
