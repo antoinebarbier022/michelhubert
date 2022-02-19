@@ -2,6 +2,7 @@
 import { DataModel } from '../../../model/data.model';
 import avatar from './michel.png';
 import favicon from './favicon.png';
+import { SectionsType } from '../../../types/All.types';
 
 const data : DataModel= {
     favicon:{
@@ -36,5 +37,6 @@ const data : DataModel= {
         {name:"Twitch",link:"https://www.tiktok.com/@michelhubertmusique"},
         {name:"Tiktok", link:"https://www.twitch.tv/michelhubertfaitlamusique"},
        ],
+    displaySection: [ "plateforms", "socials networks", "footer"]
 }
 export default data ;
