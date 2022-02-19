@@ -12,16 +12,16 @@ import deezer from '../../assets/plateforms/deezer.png';
 import youtube from '../../assets/plateforms/youtube.png';
 
 
-import { theme } from "../../config/main";
 import { ReactNode } from "react";
 import { PlateformType } from "../../types/Plateforms.types";
+import LinkCard from '../LinkCard/Link.component';
 
-type SocialNetworksProps = {
+type LinksPlateformsProps = {
     hidden?:boolean,
     data: Array<{name: PlateformType, link: string}>,
 };
 
-function LinksPlateforms( { hidden = false, data, } : SocialNetworksProps) {
+function LinksPlateforms( { hidden = false, data, } : LinksPlateformsProps) {
 
     const PlatformeImage = new Map<PlateformType, ReactNode>([
       ["Spotify", <img src={spotify} width={130}  alt="logo spotify "></img> ],
@@ -38,19 +38,13 @@ function LinksPlateforms( { hidden = false, data, } : SocialNetworksProps) {
     if (hidden) {
         return (<></>);
     }
-    return (<div className={`container rounded-xl mb-8 grid grid-cols-2 gap-2 px-4`}>
+    return (<div className={`container rounded-xl mb-8 grid grid-cols-2 gap-2 px-2 sm:px-4`}>
     {
       data.map( (value, index) => 
       PlatformeImage.get(value.name) &&
-      <a  className={`col-span-2 sm:col-span-1 flex items-center justify-center  h-[60px] rounded-lg ${theme.linkMusicBg} ${theme.linkMusicHoverBg} transition ease-in-out delay-[80]`} 
-            href={value.link}
-            title={value.name}
-            rel="noopener noreferrer"
-            target="_blank"
-            key={index}
-            >
-          {PlatformeImage.get(value.name)}
-        </a>
+        <LinkCard name={value.name} link={value.link} key={index}>
+          { PlatformeImage.get(value.name) }
+        </LinkCard>
         )
     }
 </div> );
