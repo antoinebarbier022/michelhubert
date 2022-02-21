@@ -4,7 +4,6 @@ import Card from './components/Card/Card.component';
 import SocialNetworks from './components/SocialNetworks/SocialNetworks.component';
 import MusicPlateforms from './components/LinksPlateforms/LinksPlateforms.component';
 import Contact from "./components/Contact/Contact.component";
-import Footer from "./components/Footer/Footer.component";
 
 function Home() {
       // set background 
@@ -33,7 +32,10 @@ function Home() {
                             fill={theme.iconFill} 
                             hover={theme.iconFillHover}
                             hidden={data.socialNetworks === undefined}/>
-          <Footer author={true}/>
+          <footer className={`flex-col justify-center align-center text-center`}>
+            <span className={` text-center ${theme.textOpacity} ${theme.textColor}`}>{data.title} © {new Date().getFullYear()}</span>
+            <span> - Made by <a href="https://www.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className={` font-medium ${theme.textColor} `}>@An_toine</a> </span>
+          </footer>
         </Card>
     </div>
   );
