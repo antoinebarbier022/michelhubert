@@ -7,7 +7,6 @@ import LinkCard from '../LinkCard/Link.component';
 import { ContactInfo } from '../../types/All.types';
 
 type LinkCardProps = {
-    data?: Map<ContactInfo, (string | undefined)>,
     email?: string,
     phone?: string,
     location?: string,

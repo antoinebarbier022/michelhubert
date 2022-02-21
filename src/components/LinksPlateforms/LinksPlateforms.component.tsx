@@ -36,7 +36,7 @@ function LinksPlateforms( { hidden = false, className, data, } : LinksPlateforms
     const PlatformeImage = new Map<PlateformType, ReactNode>([
       ["Spotify", <img src={spotify} width={130}  alt="logo spotify "></img> ],
       ["Deezer", <img src={deezer} width={130}  alt='logo deezer' ></img> ],
-      ["Tiktok", <Tiktok width={130} height={40}/>],
+      ["Tiktok", <Tiktok width={150} height={40}/>],
       ["5euro.com", <CinqEuros height={40}/> ],
       ["Apple Music", <AppleMusic /> ],
       ["Facebook", <Facebook  width={130} height={40} /> ],

@@ -14,7 +14,7 @@ const data : DataModel= {
         alt: "Michel Hubert dans son studio"
     },
     description: <>
-        La plus belle danseuse de tous les temps et la meilleure prof de danse classique !
+       
     </>,
     contact: {
         //location: "Montpellier",
@@ -27,7 +27,6 @@ const data : DataModel= {
     socialNetworks:[ 
         //{name:"Instagram",link:"null"},
        ],
-    displaySection: ["socials networks","contact", "footer"]
     
 }
 

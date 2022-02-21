@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
 type CardProps = {
-    background: string,
-    opacity: string,
+    background?: string,
+    opacity?: string,
     children: ReactNode
 };
 
