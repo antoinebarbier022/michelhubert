@@ -4,7 +4,6 @@ import { ReactComponent as Phone } from '../../assets/icons/phone-solid.svg';
 import { ReactComponent as Localisation } from '../../assets/icons/location-dot-solid.svg';
 import { ReactComponent as Email } from '../../assets/icons/envelope-solid.svg';
 import LinkCard from '../LinkCard/Link.component';
-import { ContactInfo } from '../../types/All.types';
 
 type LinkCardProps = {
     email?: string,
@@ -15,10 +14,10 @@ type LinkCardProps = {
 };
 
 function Contact( { email, phone, location, hidden, className, } : LinkCardProps) {
-    let inline: boolean = [email, phone, location].filter( x => x != undefined).length == 1;
+    let inline: boolean = [email, phone, location].filter( x => x !== undefined).length === 1;
     let styleLink = "flex flex-1 px-4 py-2 " + (inline ? " flex-row gap-3 " :  "flex-col gap-2 " );
 
-    if (hidden || ([email, phone, location].filter( x => x != undefined).length == 0)) {
+    if (hidden || ([email, phone, location].filter( x => x !== undefined).length === 0)) {
         return (<></>);
     }
     return (  <div className={`container mb-8 flex flex-wrap gap-2 ${className}`}>

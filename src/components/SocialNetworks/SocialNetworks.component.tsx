@@ -66,12 +66,12 @@ function SocialNetworks( { data, hidden = false, fill, hover } : SocialNetworksP
         ["Flickr", <Flickr height={30} className={styleIcon}/> ],
       ]);
 
-    if (hidden || (data?.length == 0)) {
+    if (hidden || (data?.length === 0)) {
         return (<></>);
     }
     return ( <div className={`flex flex-wrap gap-10 justify-center m-3`}>
     {
-      data != undefined &&
+      data !== undefined &&
         data.map( (value, index) =>
         PlatformeIcon.get(value.name) &&
         <a  href={value.link} 
