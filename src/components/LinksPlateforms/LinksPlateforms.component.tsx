@@ -54,14 +54,14 @@ function LinksPlateforms( { hidden = false, className, data, } : LinksPlateforms
       ["Bandcamp", <img src={bandcamp} width={130} alt="logo Bandcamp "></img> ],
     ]);
 
-    const styleGrid = (data?.length == 1 || data?.length == 3) ? "grid-cols-1": "grid-cols-2";
+    const styleGrid = (data?.length === 1 || data?.length === 3) ? "grid-cols-1": "grid-cols-2";
 
-    if (hidden || (data?.length == 0)) {
+    if (hidden || (data?.length === 0)) {
         return (<></>);
     }
     return (<div className={`section-plateforms container rounded-xl mb-8 grid gap-2 ${styleGrid} ${className}`}>
     {
-      data != undefined &&
+      data !== undefined &&
       data.map( (value, index) => 
       PlatformeImage.get(value.name) &&
         <LinkCard name={value.name} link={value.link} key={index}>
