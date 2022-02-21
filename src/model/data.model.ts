@@ -19,6 +19,5 @@ export interface DataModel{
     }
     plateforms?: Array<{ name: PlateformType, link: string }>
     socialNetworks?: Array<{ name: PlateformType, link: string }>,
-    displaySection?: Array<SectionsType>
 };
 

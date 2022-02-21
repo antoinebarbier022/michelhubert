@@ -28,16 +28,12 @@ const data : DataModel= {
         {name:"Gitlab", link:"null"},
         {name:"Github", link:"null"},
         {name:"Dribbble", link:"null"},
-        {name:"Malt", link:"null"},
-        {name:"Fiver", link:"null"},
-        
        ],
     socialNetworks:[ 
         {name:"Facebook",link:"null"},
         {name:"Instagram",link:"null"},
         {name:"Linkedin",link:"null"},
        ],
-    displaySection: ["contact", "footer"]
     
 }
 

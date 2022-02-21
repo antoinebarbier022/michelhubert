@@ -36,6 +36,5 @@ const data : DataModel= {
         {name:"Twitch",link:"https://www.tiktok.com/@michelhubertmusique"},
         {name:"Tiktok", link:"https://www.twitch.tv/michelhubertfaitlamusique"},
        ],
-    displaySection: [ "plateforms", "socials networks", "footer"]
 }
 export { data } ;
