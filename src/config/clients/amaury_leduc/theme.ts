@@ -3,7 +3,7 @@ import { ThemeModel } from "../../../model/theme.model";
 const theme: ThemeModel = {
     appBg: "bg-gradient-to-bl from-blue-900 via-indigo-500 to-purple-400",
 
-    styleImg:"md:w-[400px]",
+    styleImg:"md:w-[500px]",
 
     cardBg: "bg-white",
     cardOpacity: "bg-opacity-10",
