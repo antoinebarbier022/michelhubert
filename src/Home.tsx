@@ -35,7 +35,7 @@ function Home() {
 
           <footer className={`flex-col justify-center align-center text-center`}>
             <span className={` text-center ${theme.textOpacity} ${theme.textColor}`}>{data.title} © {new Date().getFullYear()}</span>
-            <span> - Made by <a href="http://5euros.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className={` font-medium ${theme.textColor} `}>@An_toine</a> </span>
+            <span> - Made by <a href="http://pro.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className={` font-medium ${theme.textColor} `}>@An_toine</a> </span>
           </footer>
         </Card>
     </div>
