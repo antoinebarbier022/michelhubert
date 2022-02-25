@@ -33,8 +33,8 @@ const data : DataModel= {
     socialNetworks:[ 
         {name:"Facebook",link:"https://www.facebook.com/profile.php?id=100077093640786"},
         {name:"Instagram",link:"https://www.instagram.com/michelhubert_"},
-        {name:"Twitch",link:"https://www.tiktok.com/@michelhubertmusique"},
-        {name:"Tiktok", link:"https://www.twitch.tv/michelhubertfaitlamusique"},
+        {name:"Twitch",link:"https://www.twitch.tv/michelhubertfaitlamusique"},
+        {name:"Tiktok", link:"https://www.tiktok.com/@michelhubertmusique"},
        ],
 }
 export { data } ;
