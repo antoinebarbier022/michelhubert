@@ -7,30 +7,29 @@ const data : DataModel= {
         type: "emoji",
         src: `💻`
     },
-    title:"Antoine",
-    subtitle:"Developpeur Web Freelance",
+    title:"Antoine Barbier",
+    subtitle:"Developpeur Web et passionné d'UX/UI",
     image:{
         src: avatar,
         alt: "Michel Hubert dans son studio"
     },
     description: <>
-        Passionné par le design et l'informatique, je me lance sur <strong>5euro.com</strong> afin de partager mes compétences. 
-        Depuis de nombreuses années j'ai pu aquérir ...
+        Passionné par le design et l'informatique, je me lance sur <strong>5euro.com</strong> afin de partager mes compétences avec vous. 
         <br/>
-        J'ai créé ce site internet afin de permettre 
+        Si vous souhaitez travailler avec moi, je vous conseille d'aller découvrir mes offres de <strong>microservices</strong> sur 5euros.com ou bien de me parler de votre projet par mail, Instagram ou linkedin.
     </>,
     contact: {
         //location: "36 quai des Orfèvres, Paris ",
-        email: "adresse@gmail.com"
+        email: "antoine.barbier@icloud.com"
     },
     
     plateforms: [ 
+        {name:"5euro.com", link:"null"},
+        {name:"Dribbble", link:"https://dribbble.com/An_toine"},
         {name:"Gitlab", link:"null"},
         {name:"Github", link:"null"},
-        {name:"Dribbble", link:"null"},
        ],
     socialNetworks:[ 
-        {name:"Facebook",link:"null"},
         {name:"Instagram",link:"null"},
         {name:"Linkedin",link:"null"},
        ],
