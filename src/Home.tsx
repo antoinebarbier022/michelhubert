@@ -18,10 +18,13 @@ function Home() {
         <div className={`mb-8`}>
           <figure className={`mb-10`}>
             <iframe
-              className={`mx-auto rounded-2xl border-4 border-white/10 ${theme.styleImg} aspect-video`}
+              width="560"
+              height="315"
               src="https://www.youtube.com/embed/GphQGonw5nc"
               title="YouTube video player"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
             ></iframe>
           </figure>
           <h1 className={`text-2xl font-bold uppercase`}>{data.title}</h1>
