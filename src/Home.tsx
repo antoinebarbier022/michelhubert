@@ -4,9 +4,9 @@ import Card from "./components/Card/Card.component";
 import SocialNetworks from "./components/SocialNetworks/SocialNetworks.component";
 import MusicPlateforms from "./components/LinksPlateforms/LinksPlateforms.component";
 import Contact from "./components/Contact/Contact.component";
-import LinkCard from "./components/LinkCard/Link.component";
-import holdUpImg from "./assets/hold-up.png";
-import holdUpWhiteImg from "./assets/hold-up-white.png";
+//import LinkCard from "./components/LinkCard/Link.component";
+//import holdUpImg from "./assets/hold-up.png";
+//import holdUpWhiteImg from "./assets/hold-up-white.png";
 
 function Home() {
   // set background
