@@ -18,8 +18,7 @@ function Home() {
         <div className={`mb-8`}>
           <figure className={`mb-10`}>
             <iframe
-              width="560"
-              height="315"
+              className={`mx-auto rounded-2xl border-4 border-white/10 w-full aspect-video`}
               src="https://www.youtube.com/embed/GphQGonw5nc"
               title="YouTube video player"
               frameBorder="0"
