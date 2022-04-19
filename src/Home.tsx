@@ -39,7 +39,7 @@ function Home() {
             link="https://holdup-la-boutique.company.site/"
             className="py-2"
           >
-            <img src={holdupImg} alt="holdup la boutique" className="h-28" />
+            <img src={holdupImg} alt="holdup la boutique" className="h-full" />
           </LinkCard>
         </div>
 
