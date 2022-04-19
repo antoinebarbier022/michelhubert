@@ -4,9 +4,9 @@ import Card from "./components/Card/Card.component";
 import SocialNetworks from "./components/SocialNetworks/SocialNetworks.component";
 import MusicPlateforms from "./components/LinksPlateforms/LinksPlateforms.component";
 import Contact from "./components/Contact/Contact.component";
-//import LinkCard from "./components/LinkCard/Link.component";
-//import holdUpImg from "./assets/hold-up.png";
-//import holdUpWhiteImg from "./assets/hold-up-white.png";
+import LinkCard from "./components/LinkCard/Link.component";
+
+import holdupImg from "./config/clients/amaury_leduc/hold-up.png";
 
 function Home() {
   // set background
@@ -34,11 +34,13 @@ function Home() {
             {" "}
             {data.description}
           </p>
-          {/**
-             <LinkCard className="py-2">
-            <img src={holdUpImg} alt="holdup la boutique" className="h-16" />
+
+          <LinkCard
+            link="https://holdup-la-boutique.company.site/"
+            className="py-2"
+          >
+            <img src={holdupImg} alt="holdup la boutique" className="h-28" />
           </LinkCard>
-             */}
         </div>
 
         <MusicPlateforms
