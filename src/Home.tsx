@@ -19,7 +19,7 @@ function Home() {
           <figure className={`mb-10`}>
             <iframe
               className={`mx-auto rounded-2xl border-4 border-white/10 w-full aspect-video`}
-              src="https://www.youtube.com/embed/GphQGonw5nc"
+              src="https://www.youtube.com/embed/h4x2rAJb7mg"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -34,13 +34,6 @@ function Home() {
             {" "}
             {data.description}
           </p>
-
-          <LinkCard
-            link="https://holdup-la-boutique.company.site/"
-            className="py-2"
-          >
-            <img src={holdupImg} alt="holdup la boutique" className="h-full" />
-          </LinkCard>
         </div>
 
         <MusicPlateforms
