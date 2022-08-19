@@ -4,9 +4,6 @@ import Card from "./components/Card/Card.component";
 import SocialNetworks from "./components/SocialNetworks/SocialNetworks.component";
 import MusicPlateforms from "./components/LinksPlateforms/LinksPlateforms.component";
 import Contact from "./components/Contact/Contact.component";
-import LinkCard from "./components/LinkCard/Link.component";
-
-import holdupImg from "./config/clients/amaury_leduc/hold-up.png";
 
 function Home() {
   // set background
