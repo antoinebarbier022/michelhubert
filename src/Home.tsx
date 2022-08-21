@@ -4,8 +4,12 @@ import Card from "./components/Card/Card.component";
 import SocialNetworks from "./components/SocialNetworks/SocialNetworks.component";
 import MusicPlateforms from "./components/LinksPlateforms/LinksPlateforms.component";
 import Contact from "./components/Contact/Contact.component";
-
+import JSConfetti from "js-confetti";
 function Home() {
+  //confetti
+  const jsConfetti = new JSConfetti();
+  jsConfetti.addConfetti();
+
   // set background
   const tab = theme.appBg.split(" ");
   tab.map((x) => document.body.classList.add(x));
