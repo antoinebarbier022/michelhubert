@@ -5,20 +5,66 @@ import SocialNetworks from "./components/SocialNetworks/SocialNetworks.component
 import MusicPlateforms from "./components/LinksPlateforms/LinksPlateforms.component";
 import Contact from "./components/Contact/Contact.component";
 import JSConfetti from "js-confetti";
+import YoutubePlayer from "youtube-player";
+import { useEffect, useState } from "react";
+
 function Home() {
-  //confetti
-  const jsConfetti = new JSConfetti();
-  jsConfetti.addConfetti();
+  // set confetti on video
+  const [timecode, setTimecode] = useState(0);
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    let player = YoutubePlayer("player-1", {
+      videoId: "h4x2rAJb7mg",
+      playerVars: {
+        fs: 0, //full screen
+      },
+    });
+    player.on("stateChange", async (event) => {
+      const time = await player.getCurrentTime().then((value) => {
+        return value;
+      });
+      switch (event.data) {
+        case 1:
+          // console.log("en lecture");
+          setIsActive(true);
+          setTimecode(time);
+          break;
+        default:
+          // "en pause | non démarré | arrêté");
+          setIsActive(false);
+          setTimecode(time);
+          break;
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    let interval: any = null;
+    if (isActive) {
+      interval = setInterval(() => {
+        setTimecode((time) => time + 0.5);
+        console.log(timecode);
+      }, 500);
+    }
+
+    // lancé de confetti
+    if (
+      (timecode >= 26.5 && timecode <= 28) ||
+      (timecode >= 37 && timecode <= 38)
+    ) {
+      const jsConfetti = new JSConfetti();
+      jsConfetti.addConfetti();
+    }
+
+    return () => clearInterval(interval);
+  }, [timecode, isActive]);
 
   // set background
   const tab = theme.appBg.split(" ");
   tab.map((x) => document.body.classList.add(x));
-  return (
-    <div className={`App h-full py-10 ${theme.textColor}`}>
-      <Card background={theme.cardBg} opacity={theme.cardOpacity}>
-        <div className={`mb-8`}>
-          <figure className={`mb-10`}>
-            <iframe
+  /**
+ * <iframe
               className={`mx-auto rounded-2xl border-4 border-white/10 w-full aspect-video`}
               src="https://www.youtube.com/embed/h4x2rAJb7mg"
               title="YouTube video player"
@@ -26,6 +72,16 @@ function Home() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
+ */
+  return (
+    <div className={`App h-full py-10 ${theme.textColor}`}>
+      <Card background={theme.cardBg} opacity={theme.cardOpacity}>
+        <div className={`mb-8`}>
+          <figure className={`mb-10`}>
+            <div
+              id="player-1"
+              className={`mx-auto rounded-2xl border-4 border-white/10 w-full aspect-video`}
+            ></div>
           </figure>
           <h1 className={`text-2xl font-bold uppercase`}>{data.title}</h1>
           <h2 className={`mb-2 text-md font-mono`}>{data.subtitle}</h2>
