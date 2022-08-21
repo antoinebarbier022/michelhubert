@@ -44,17 +44,18 @@ function Home() {
     if (isActive) {
       interval = setInterval(() => {
         setTimecode((time) => time + 0.5);
-        console.log(timecode);
+        /*console.log(timecode);*/
       }, 500);
     }
 
     // lancé de confetti
     if (
-      (timecode >= 26.5 && timecode <= 28) ||
-      (timecode >= 37 && timecode <= 38)
+      (timecode >= 26.5 && timecode <= 30) ||
+      (timecode >= 37 && timecode <= 37.6)
     ) {
       const jsConfetti = new JSConfetti();
       jsConfetti.addConfetti();
+      console.log("Nouvel EP le 22/09/2022 ! 🎉");
     }
 
     return () => clearInterval(interval);
