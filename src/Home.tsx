@@ -62,7 +62,7 @@ function Home() {
             {" "}
             - Made by{" "}
             <a
-              href="http://pro.antoinebarbier.fr"
+              href="https://antoinebarbier.fr"
               target="_blank"
               rel="noopener noreferrer"
               className={` font-medium ${theme.textColor} `}
