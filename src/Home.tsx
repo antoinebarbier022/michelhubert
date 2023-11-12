@@ -4,14 +4,12 @@ import Card from "./components/Card/Card.component";
 import SocialNetworks from "./components/SocialNetworks/SocialNetworks.component";
 import MusicPlateforms from "./components/LinksPlateforms/LinksPlateforms.component";
 import Contact from "./components/Contact/Contact.component";
-import JSConfetti from "js-confetti";
+
 import YoutubePlayer from "youtube-player";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function Home() {
-  // set confetti on video
-  const [timecode, setTimecode] = useState(0);
-  const [isActive, setIsActive] = useState(false);
+
 
   useEffect(() => {
     YoutubePlayer("player-1", {
