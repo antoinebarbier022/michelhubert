@@ -14,66 +14,16 @@ function Home() {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    let player = YoutubePlayer("player-1", {
-      videoId: "h4x2rAJb7mg",
+    YoutubePlayer("player-1", {
+      videoId: "NorElgb4c9M", 
       playerVars: {
         fs: 0, //full screen
       },
     });
-    player.on("stateChange", async (event) => {
-      const time = await player.getCurrentTime().then((value) => {
-        return value;
-      });
-      switch (event.data) {
-        case 1:
-          // console.log("en lecture");
-          setIsActive(true);
-          setTimecode(time);
-          break;
-        default:
-          // "en pause | non démarré | arrêté");
-          setIsActive(false);
-          setTimecode(time);
-          break;
-      }
-    });
+    
   }, []);
 
-  useEffect(() => {
-    let interval: any = null;
-    if (isActive) {
-      interval = setInterval(() => {
-        setTimecode((time) => time + 0.5);
-        /*console.log(timecode);*/
-      }, 500);
-    }
-
-    // lancé de confetti
-    if (
-      (timecode >= 26.5 && timecode <= 30) ||
-      (timecode >= 37 && timecode <= 37.6)
-    ) {
-      const jsConfetti = new JSConfetti();
-      jsConfetti.addConfetti();
-      console.log("Nouvel EP le 22/09/2022 ! 🎉");
-    }
-
-    return () => clearInterval(interval);
-  }, [timecode, isActive]);
-
-  // set background
-  const tab = theme.appBg.split(" ");
-  tab.map((x) => document.body.classList.add(x));
-  /**
- * <iframe
-              className={`mx-auto rounded-2xl border-4 border-white/10 w-full aspect-video`}
-              src="https://www.youtube.com/embed/h4x2rAJb7mg"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
- */
+  
   return (
     <div className={`App h-full py-10 ${theme.textColor}`}>
       <Card background={theme.cardBg} opacity={theme.cardOpacity}>
